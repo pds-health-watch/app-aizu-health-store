@@ -1,0 +1,27 @@
+<multistatus xmlns="DAV:">
+    <response>
+        <href>dcbox:/</href>
+        <propstat>
+            <prop>
+                <resourcetype>
+                    <collection/>
+                </resourcetype>
+                <acl xml:base="https://demo.personium.io/app-aizu-health-store/__role/__/" xmlns:p="urn:x-dcl:xmlns">
+                </acl>
+            </prop>
+        </propstat>
+    </response>
+    <response>
+        <href>dcbox:/OData</href>
+        <propstat>
+            <prop>
+                <resourcetype>
+                    <collection/>
+                    <p:odata xmlns:p="urn:x-personium:xmlns"/>
+                </resourcetype>
+                <acl xml:base="https://demo.personium.io/app-aizu-health-store/__role/__/" xmlns:p="urn:x-dcl:xmlns">
+                </acl>
+            </prop>
+        </propstat>
+    </response>
+</multistatus>
