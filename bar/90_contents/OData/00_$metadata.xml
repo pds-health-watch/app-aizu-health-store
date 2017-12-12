@@ -1,33 +1,59 @@
 <edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:p="urn:x-personium:xmlns">
     <edmx:DataServices m:DataServiceVersion="1.0">
         <Schema xmlns="http://schemas.microsoft.com/ado/2006/04/edm" Namespace="UserData">
-            <EntityType Name="HeartRate" OpenType="true">
+            <EntityType Name="ActivitySummary" OpenType="true">
                 <Key>
                     <PropertyRef Name="__id"/>
                 </Key>
                 <Property Name="__id" Type="Edm.String" Nullable="false" DefaultValue="UUID()" p:Format="regEx('^[a-zA-Z0-9][a-zA-Z0-9-_:]{0,199}$')"/>
                 <Property Name="__published" Type="Edm.DateTime" Nullable="false" DefaultValue="SYSUTCDATETIME()" Precision="3"/>
                 <Property Name="__updated" Type="Edm.DateTime" Nullable="false" DefaultValue="SYSUTCDATETIME()" Precision="3"/>
-                <Property Name="creationDate" Type="Edm.DateTime" Nullable="false"/>
+                <Property Name="activeEnergyBurned" Type="Edm.Double" Nullable="false" DefaultValue="0.0"/>
+                <Property Name="activeEnergyBurnedGoal" Type="Edm.Double" Nullable="false" DefaultValue="0.0"/>
+                <Property Name="activeEnergyBurnedUnit" Type="Edm.String" Nullable="false"/>
+                <Property Name="appleExerciseTime" Type="Edm.Double" Nullable="false" DefaultValue="0.0"/>
+                <Property Name="appleExerciseTimeGoal" Type="Edm.Double" Nullable="false" DefaultValue="0.0"/>
+                <Property Name="appleStandHours" Type="Edm.Double" Nullable="false" DefaultValue="0.0"/>
+                <Property Name="appleStandHoursGoal" Type="Edm.Double" Nullable="false" DefaultValue="0.0"/>
+                <Property Name="dateComponents" Type="Edm.String" Nullable="false"/>
+            </EntityType>
+            <EntityType Name="HealthRecord" OpenType="true">
+                <Key>
+                    <PropertyRef Name="__id"/>
+                </Key>
+                <Property Name="__id" Type="Edm.String" Nullable="false" DefaultValue="UUID()" p:Format="regEx('^[a-zA-Z0-9][a-zA-Z0-9-_:]{0,199}$')"/>
+                <Property Name="__published" Type="Edm.DateTime" Nullable="false" DefaultValue="SYSUTCDATETIME()" Precision="3"/>
+                <Property Name="__updated" Type="Edm.DateTime" Nullable="false" DefaultValue="SYSUTCDATETIME()" Precision="3"/>
                 <Property Name="device" Type="Edm.String" Nullable="false"/>
+                <Property Name="deviceName" Type="Edm.String" Nullable="false"/>
                 <Property Name="endDate" Type="Edm.DateTime" Nullable="false"/>
                 <Property Name="sourceName" Type="Edm.String" Nullable="false"/>
                 <Property Name="sourceVersion" Type="Edm.String" Nullable="false"/>
                 <Property Name="startDate" Type="Edm.DateTime" Nullable="false"/>
+                <Property Name="type" Type="Edm.String" Nullable="false"/>
                 <Property Name="unit" Type="Edm.String" Nullable="true"/>
                 <Property Name="value" Type="Edm.Double" Nullable="true"/>
             </EntityType>
-            <EntityType Name="StepCount" OpenType="true">
+            <EntityType Name="Workout" OpenType="true">
                 <Key>
                     <PropertyRef Name="__id"/>
                 </Key>
                 <Property Name="__id" Type="Edm.String" Nullable="false" DefaultValue="UUID()" p:Format="regEx('^[a-zA-Z0-9][a-zA-Z0-9-_:]{0,199}$')"/>
                 <Property Name="__published" Type="Edm.DateTime" Nullable="false" DefaultValue="SYSUTCDATETIME()" Precision="3"/>
                 <Property Name="__updated" Type="Edm.DateTime" Nullable="false" DefaultValue="SYSUTCDATETIME()" Precision="3"/>
+                <Property Name="altitude" Type="Edm.Double" Nullable="false" DefaultValue="0.0"/>
+                <Property Name="course" Type="Edm.Double" Nullable="false" DefaultValue="0.0"/>
+                <Property Name="date" Type="Edm.DateTime" Nullable="false"/>
+                <Property Name="horizontalAccuracy" Type="Edm.Double" Nullable="false" DefaultValue="0.0"/>
+                <Property Name="latitude" Type="Edm.Double" Nullable="false" DefaultValue="0.0"/>
+                <Property Name="longitude" Type="Edm.Double" Nullable="false" DefaultValue="0.0"/>
+                <Property Name="speed" Type="Edm.Double" Nullable="false" DefaultValue="0.0"/>
+                <Property Name="verticalAccuracy" Type="Edm.Double" Nullable="false" DefaultValue="0.0"/>
             </EntityType>
             <EntityContainer Name="UserData" m:IsDefaultEntityContainer="true">
-                <EntitySet Name="HeartRate" EntityType="UserData.HeartRate"/>
-                <EntitySet Name="StepCount" EntityType="UserData.StepCount"/>
+                <EntitySet Name="HealthRecord" EntityType="UserData.HealthRecord"/>
+                <EntitySet Name="Workout" EntityType="UserData.Workout"/>
+                <EntitySet Name="ActivitySummary" EntityType="UserData.ActivitySummary"/>
             </EntityContainer>
         </Schema>
     </edmx:DataServices>
