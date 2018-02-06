@@ -1,0 +1,10 @@
+{
+    "advisor": {
+        "DisplayName": "Advisor",
+        "Description": "Read/Write permission."
+    },
+    "friend": {
+        "DisplayName": "Friend",
+        "Description": "Readonly permission."
+    }
+}
