@@ -20,6 +20,26 @@
                     <p:odata xmlns:p="urn:x-personium:xmlns"/>
                 </resourcetype>
                 <acl xml:base="https://demo.personium.io/app-aizu-health-store/__role/__/" xmlns:p="urn:x-dcl:xmlns">
+                    <ace>
+                        <principal>
+                            <href>advisor</href>
+                        </principal>
+                        <grant>
+                            <privilege>
+                                <all/>
+                            </privilege>
+                        </grant>
+                    </ace>
+                    <ace>
+                        <principal>
+                            <href>friend</href>
+                        </principal>
+                        <grant>
+                            <privilege>
+                                <read/>
+                            </privilege>
+                        </grant>
+                    </ace>
                 </acl>
             </prop>
         </propstat>
