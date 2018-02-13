@@ -1,0 +1,10 @@
+{
+  "Roles": [
+    {
+      "Name": "advisor"
+    },
+    {
+      "Name": "friend"
+    }
+  ]
+}

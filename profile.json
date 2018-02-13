@@ -1,7 +1,7 @@
 {
     "CellType": "App",
-    "DisplayName": {"en": "Aizu Health Store", "ja": "会津健康ストア"},
-    "Description": {"en": "A Personium app that manage your health.", "ja": "健康管理できるPersoniumアプリ"},
+    "DisplayName": "Aizu Health Store",
+    "Description": "A Personium app that manage your health.",
     "Image": "",
     "ProfileImageName": ""
 }
