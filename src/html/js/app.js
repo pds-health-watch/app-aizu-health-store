@@ -1,8 +1,11 @@
 const APP_URL = "https://***/***/";
-const APP_BOX_NAME = 'io_personium_demo_app-aizu-health-store';
 
 getEngineEndPoint = function() {
     return Common.getAppCellUrl() + "__/html/Engine/getAppAuthToken";
+};
+
+getStartOAuth2EngineEndPoint = function() {
+    return Common.getAppCellUrl() + "__/html/Engine/start_oauth2";
 };
 
 getNamesapces = function() {
