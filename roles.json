@@ -1,10 +1,10 @@
 {
     "advisor": {
         "DisplayName": "Advisor",
-        "Description": "Read/Write permission."
+        "Description": "Able to view your healthcare data and provide comments."
     },
     "friend": {
         "DisplayName": "Friend",
-        "Description": "Readonly permission."
+        "Description": "Able to view your healthcare data."
     }
 }
