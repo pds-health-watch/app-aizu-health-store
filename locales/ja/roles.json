@@ -1,0 +1,10 @@
+{
+    "advisor": {
+        "DisplayName": "アドバイザー",
+        "Description": "ヘルスケアデータ参照とコメント"
+    },
+    "friend": {
+        "DisplayName": "友達",
+        "Description": "ヘルスケアデータ参照"
+    }
+}

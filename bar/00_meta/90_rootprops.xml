@@ -26,7 +26,7 @@
                         </principal>
                         <grant>
                             <privilege>
-                                <all/>
+                                <read/>
                             </privilege>
                         </grant>
                     </ace>
